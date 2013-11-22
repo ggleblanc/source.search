@@ -26,10 +26,34 @@ the Eclipse class that you're looking for.
 
 ###Usage
 
-First, extract the source search source code into a Java project.  
-Compile and run.
+First, extract the source search source code into a Java project.
+  Compile and run.
 
 Here's what the main window of the application looks like:
 
 ![main window](SourceSearch.png "Main Window")
 
+To find the Eclipse source JAR files, left click on the File menu
+option and left click on Search Directory.  Find the directory that
+contains the Eclipse plugins.  On my Windows 8 computer, that
+directory is C:\Eclipse\eclipse-4.2 Java\eclipse\plugins.  Left click
+on Open.
+
+Here's what the main window of the application looks like when
+you retrieve all of the source JAR files:
+
+![JAR files window](SourceSearch.png "JAR Files Window")
+
+You can open the JAR files on the right to browse the Eclipse source
+code, or you can search for a particular term, and see all of the
+Eclipse source code where the search term matches.
+
+In this case, I wanted to look at the EventManager class of the
+Eclipse core commands.
+
+![EventManager window](SourceSearch.png "EventManager Window")
+
+You can browse or search as many times as you want.
+
+I hope this Java application will be as useful to you, an
+Eclipse plug-in or RCP developer, as it was to me.

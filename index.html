@@ -28,37 +28,64 @@
         </ul>
       </header>
       <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+        <h2>
+<a name="eclipse-source-search" class="anchor" href="#eclipse-source-search"><span class="octicon octicon-link"></span></a>Eclipse Source Search</h2>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>The Eclipse IDE for RCP and RAP developers contains the source code
+for Eclipse.  The source code is packaged in plugin JAR files 
+containing the word "source".</p>
+
+<p>The plugin directory is located at /eclipse/plugins.</p>
+
+<p>Three of the source JAR files in Eclipse 4.2 are:</p>
+
+<ul>
+<li>com.ibm.icu.source_4.4.2.v20110823.jar</li>
+<li>org.eclipse.core.commands.source_3.6.2.v20130123-162658.jar</li>
+<li>org.eclipse.core.databinding.source_1.4.1.v20120912-132807.jar</li>
+</ul><p>Looking inside of these source JAR files has been a painful task.</p>
+
+<p>To make it easier, I decided to write a Java Swing application to
+extract the source classes and allow for a limited search to find
+the Eclipse class that you're looking for.</p>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>First, extract the source search source code into a Java project.
+  Compile and run.</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>Here's what the main window of the application looks like:</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p><img src="http://www.java-articles.info/images/SourceSearch.png" alt="main window" title="Main Window"></p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p>To find the Eclipse source JAR files, left click on the File menu
+option and left click on Search Directory.  Find the directory that
+contains the Eclipse plugins.  On my Windows 8 computer, that
+directory is C:\Eclipse\eclipse-4.2 Java\eclipse\plugins.  Left click
+on Open.</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>Here's what the main window of the application looks like when
+you retrieve all of the source JAR files:</p>
+
+<p><img src="http://www.java-articles.info/images/SourceSearchSource.png" alt="JAR files window" title="JAR Files Window"></p>
+
+<p>You can open the JAR files on the right to browse the Eclipse source
+code, or you can search for a particular term, and see all of the
+Eclipse source code where the search term matches.</p>
+
+<p>In this case, I wanted to look at the EventManager class of the
+Eclipse core commands.</p>
+
+<p><img src="http://www.java-articles.info/images/SourceSearchEventManager.png" alt="EventManager window" title="EventManager Window"></p>
+
+<p>You can browse or search as many times as you want.</p>
+
+<p>I hope this Java application will be as useful to you, an
+Eclipse plug-in or RCP developer, as it was to me.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/ggleblanc">ggleblanc</a></p>

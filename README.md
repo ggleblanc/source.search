@@ -42,7 +42,7 @@ on Open.
 Here's what the main window of the application looks like when
 you retrieve all of the source JAR files:
 
-![JAR files window](SourceSearch.png "JAR Files Window")
+![JAR files window](SourceSearchSource.png "JAR Files Window")
 
 You can open the JAR files on the right to browse the Eclipse source
 code, or you can search for a particular term, and see all of the
@@ -51,7 +51,7 @@ Eclipse source code where the search term matches.
 In this case, I wanted to look at the EventManager class of the
 Eclipse core commands.
 
-![EventManager window](SourceSearch.png "EventManager Window")
+![EventManager window](SourceSearchEventManager.png "EventManager Window")
 
 You can browse or search as many times as you want.
 
